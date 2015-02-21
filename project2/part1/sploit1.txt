@@ -1,0 +1,1 @@
+strcpy function does not check the bounds of the strings while copying and so this is a way to overflow. This sploit simply overflows the buf string in target1.c and overrites the return address. The new return address is 0xbffffd5d and is hard coded into the args[1]. The two no-ops at the begining of the string serves as the 4-byte alignment.

